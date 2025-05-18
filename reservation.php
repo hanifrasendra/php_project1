@@ -15,8 +15,8 @@
         <div class="container1">
             <form action="" method="post">
                 <div class="form-group">
-                <label for="nama">nama</label><br>
-                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap"><br>
+                    <label for="nama">Nama</label><br>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap"><br>
                 </div>
                 <div class="form-group">
                     <label for="date">Date</label><br>
