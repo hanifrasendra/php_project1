@@ -12,12 +12,26 @@
 </head>
 <body>
     <main>
-        <form action="" method="post">
-            <label for="nama">nama</label><br>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
-            <label><input type="text" name=""></label>
-            <input type="date" id="date" name="date">
-        </form>
+        <div class="container1">
+            <form action="" method="post">
+                <div class="form-group">
+                <label for="nama">nama</label><br>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap"><br>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label><br>
+                    <input type="date" name="date" id="date"><br>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label><br>
+                    <input type="time" name="time" id="time"><br>
+                </div>
+                <div class="form-group">
+                    <label for="people">People</label><br>
+                    <input type="number" name="people" id="people"><br>
+                </div>
+            </form>
+        </div>
     </main>
 </body>
 </html>

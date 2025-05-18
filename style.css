@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(218, 218, 218);
+}
+
+
+.container1 {
+    width: 500px;
+    height: 700px;
+    margin: auto;
+    justify-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
