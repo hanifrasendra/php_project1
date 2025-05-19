@@ -1,5 +1,14 @@
 <?php
-
+include 'config.php';
+if (isset($_POST['submit'])) {
+    $name = $_POST['nama'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $people = $_POST['people'];
+    
+    $tambah = "INSERT INTO reservations (name, date, time, people) VALUES ('$name', '$date', '$time', '$people')";
+    echo "<script>alert('Data berhasil ditambahkan'); location='dashboard.php'</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +38,10 @@
                 <div class="form-group">
                     <label for="people">People</label><br>
                     <input type="number" name="people" id="people"><br>
+                </div>
+                <div class="form-group">
+                    <label for="submit"></label>
+                    <input type="submit" value="Submit" name="submit">
                 </div>
             </form>
         </div>
