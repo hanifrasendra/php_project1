@@ -1,0 +1,50 @@
+
+.header {
+    
+}
+
+.inner-header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-group {
+    display: flex;
+    gap: 40px;
+}
+
+.link-list {
+    list-style: none;
+}
+
+.link-list a {
+    text-decoration: none;
+}
+
+.container1 {
+    width: 500px;
+    height: 700px;
+    margin: auto;
+    justify-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.form-group input{
+    width: 400px;
+    height: 40px;
+}
+
+#table  {
+    width: 700px;
+    margin: 100px auto;
+}

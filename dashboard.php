@@ -9,11 +9,24 @@ $result = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="src/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    <header class="bg-white">
+        <div class="flex justify-between w-[90%] my-5 mx-auto">
+            <div class=""></div>
+            <nav class="nav-bar">
+                <ul class="flex gap-x-20 ">
+                    <li class="link-list"><a href="">Home</a></li>
+                    <li class="link-list"><a href="">Service</a></li>
+                    <li class="link-list"><a href="">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
+
         <table border="1" id="table">
             <tr>
                 <th>Nama</th>
