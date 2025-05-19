@@ -6,8 +6,16 @@ if (isset($_POST['submit'])) {
     $time = $_POST['time'];
     $people = $_POST['people'];
     
-    $tambah = "INSERT INTO reservations (name, date, time, people) VALUES ('$name', '$date', '$time', '$people')";
-    echo "<script>alert('Data berhasil ditambahkan'); location='dashboard.php'</script>";
+    $tambah = "INSERT INTO reservations (nama, tanggal_reservasi, waktu_reservasi, jumlah_orang) VALUES ('$name', '$date', '$time', '$people')";
+    
+
+    if (mysqli_query($conn, $tambah)) {
+        echo "tambah data berhasil";
+    } else {
+        echo "Error : ".mysqli_error($conn);
+    }
+    
+    echo "<script>alert('Data berhasil ditambahkan'); location='dashboard.php';</script>";
 }
 ?>
 
@@ -22,26 +30,26 @@ if (isset($_POST['submit'])) {
 <body>
     <main>
         <div class="container1">
-            <form action="" method="post">
+            <form method="POST">
                 <div class="form-group">
                     <label for="nama">Nama</label><br>
-                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap"><br>
+                    <input type="text" name="nama" placeholder="Masukkan nama lengkap"><br>
                 </div>
                 <div class="form-group">
                     <label for="date">Date</label><br>
-                    <input type="date" name="date" id="date"><br>
+                    <input type="date" name="date"><br>
                 </div>
                 <div class="form-group">
                     <label for="time">Time</label><br>
-                    <input type="time" name="time" id="time"><br>
+                    <input type="time" name="time"><br>
                 </div>
                 <div class="form-group">
                     <label for="people">People</label><br>
-                    <input type="number" name="people" id="people"><br>
+                    <input type="number" name="people" ><br>
                 </div>
                 <div class="form-group">
                     <label for="submit"></label>
-                    <input type="submit" value="Submit" name="submit">
+                    <input type="submit" name="submit">
                 </div>
             </form>
         </div>

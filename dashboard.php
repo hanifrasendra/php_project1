@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-$query = "SELECT * FROM reservation_service.reservations";
+$query = "SELECT * FROM reservations";
 $result = mysqli_query($conn, $query);
 ?>
 
