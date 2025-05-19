@@ -20,16 +20,17 @@ $result = mysqli_query($conn, $query);
                 <th>Date</th>
                 <th>Time</th>
                 <th>Person</th>
+                <th>action</th>
             </tr>
             <?php while($data = mysqli_fetch_assoc($result)): ?>
                 <tr>
                     <td><?php echo $data['nama'] ?></td>
-                    <td><?php echo $data['date']?></td>
-                    <td><?php echo $data['time']?></td>
-                    <td><?php echo $data['people']?></td>
+                    <td><?php echo $data['tanggal_reservasi']?></td>
+                    <td><?php echo $data['waktu_reservasi']?></td>
+                    <td><?php echo $data['jumlah_orang']?></td>
                     <td>
-                        <a href="">Edit</a>
-                        <a href="">Hapus</a>
+                        <a href="update.php?id=<?php echo $data['id']?>">Edit</a>
+                        <a href="delete.php?id=<?php echo $data['id']?>">Hapus</a>
                     </td>
                     <?php endwhile; ?>
                 </tr>

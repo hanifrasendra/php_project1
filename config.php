@@ -10,6 +10,4 @@ if (!$conn) {
     die ("koneksi gagal : ". mysqli_connect_error());
 } 
 
-echo "<script>location = 'reservation.php'</script>";
-
 ?>

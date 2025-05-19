@@ -7,15 +7,11 @@ if (isset($_POST['submit'])) {
     $people = $_POST['people'];
     
     $tambah = "INSERT INTO reservations (nama, tanggal_reservasi, waktu_reservasi, jumlah_orang) VALUES ('$name', '$date', '$time', '$people')";
-    
 
     if (mysqli_query($conn, $tambah)) {
-        echo "tambah data berhasil";
-    } else {
-        echo "Error : ".mysqli_error($conn);
+    echo "<script>alert('Data ditambahkan!'); location='dashboard.php';</script>";
     }
     
-    echo "<script>alert('Data berhasil ditambahkan'); location='dashboard.php';</script>";
 }
 ?>
 
