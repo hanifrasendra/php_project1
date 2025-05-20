@@ -20,10 +20,22 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
     <title>Document</title>
 </head>
 <body>
+    <header class="bg-white sticky top-0 z-0 mx-0 items-center">
+        <div class="flex justify-between w-[90%] mx-auto h-15">
+            <div class=""></div>
+            <nav class="flex items-center">
+                <ul class="flex gap-x-20">
+                    <li class="link-list"><a href="">Home</a></li>
+                    <li class="link-list"><a href="">Service</a></li>
+                    <li class="link-list"><a href="">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <div class="container1">
             <form method="POST">

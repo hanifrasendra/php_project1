@@ -13,11 +13,11 @@ $result = mysqli_query($conn, $query);
     <title>Document</title>
 </head>
 <body>
-    <header class="bg-white">
-        <div class="flex justify-between w-[90%] my-5 mx-auto">
+    <header class="bg-white sticky top-0 z-0 mx-0 items-center">
+        <div class="flex justify-between w-[90%] mx-auto h-15">
             <div class=""></div>
-            <nav class="nav-bar">
-                <ul class="flex gap-x-20 ">
+            <nav class="flex items-center">
+                <ul class="flex gap-x-20">
                     <li class="link-list"><a href="">Home</a></li>
                     <li class="link-list"><a href="">Service</a></li>
                     <li class="link-list"><a href="">About Us</a></li>
@@ -25,9 +25,21 @@ $result = mysqli_query($conn, $query);
             </nav>
         </div>
     </header>
-    <main>
+    <section class="w-screen">
+            <img src="https://images.pexels.com/photos/3155726/pexels-photo-3155726.jpeg?cs=srgb&dl=pexels-asadphoto-3155726.jpg&fm=jpg" alt=""
+            class="w-screen z-0">
+            <p>for more information</p>
+            <button class="z-1 absolute top-200 left-[20%]">Make reservation
+            </button>
+    </section>
+    <section>
+        <div>
 
-        <table border="1" id="table">
+        </div>
+    </section>
+    <main class="">
+        <div class="w-300 h-screen mx-auto shadow-xl mt-5">
+        <table border="1" class="w-150">
             <tr>
                 <th>Nama</th>
                 <th>Date</th>
@@ -48,7 +60,7 @@ $result = mysqli_query($conn, $query);
                     <?php endwhile; ?>
                 </tr>
         </table>
-        
+        </div>
     </main>
 </body>
 </html>
