@@ -13,8 +13,8 @@ $result = mysqli_query($conn, $query);
     <title>Document</title>
 </head>
 <body>
-    <header class="bg-white sticky top-0 z-0 mx-0 items-center">
-        <div class="flex justify-between w-[90%] mx-auto h-15">
+    <header class="bg-transparent fixed top-0 mx-0 items-center">
+        <div class="flex justify-between w-[90%] mx-auto h-15 z-1">
             <div class=""></div>
             <nav class="flex items-center">
                 <ul class="flex gap-x-20">
@@ -24,14 +24,14 @@ $result = mysqli_query($conn, $query);
                 </ul>
             </nav>
         </div>
+        <img src="https://images.pexels.com/photos/3155726/pexels-photo-3155726.jpeg?cs=srgb&dl=pexels-asadphoto-3155726.jpg&fm=jpg" alt=""
+        class="w-[100%] z-0">
+        <div class="z-1 absolute top-200 left-[20%]">
+            <p></p>
+            <button class="">Make reservation</button>
+        </div>
     </header>
-    <section class="w-screen">
-            <img src="https://images.pexels.com/photos/3155726/pexels-photo-3155726.jpeg?cs=srgb&dl=pexels-asadphoto-3155726.jpg&fm=jpg" alt=""
-            class="w-screen z-0">
-            <p>for more information</p>
-            <button class="z-1 absolute top-200 left-[20%]">Make reservation
-            </button>
-    </section>
+    
     <section>
         <div>
 
@@ -48,12 +48,12 @@ $result = mysqli_query($conn, $query);
                 <th>action</th>
             </tr>
             <?php while($data = mysqli_fetch_assoc($result)): ?>
-                <tr>
-                    <td><?php echo $data['nama'] ?></td>
-                    <td><?php echo $data['tanggal_reservasi']?></td>
-                    <td><?php echo $data['waktu_reservasi']?></td>
-                    <td><?php echo $data['jumlah_orang']?></td>
-                    <td>
+                <tr class="border-b-1 border-[#dddddd]">
+                    <td class="text-center"><?php echo $data['nama'] ?></td>
+                    <td class="text-center"><?php echo $data['tanggal_reservasi']?></td>
+                    <td class="text-center"><?php echo $data['waktu_reservasi']?></td>
+                    <td class="text-center"><?php echo $data['jumlah_orang']?></td>
+                    <td class="text-center">
                         <a href="update.php?id=<?php echo $data['id']?>">Edit</a>
                         <a href="delete.php?id=<?php echo $data['id']?>">Hapus</a>
                     </td>

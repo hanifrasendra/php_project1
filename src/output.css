@@ -253,8 +253,18 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-b-1 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-\[\#dddddd\] {
+    border-color: #dddddd;
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .text-center {
+    text-align: center;
   }
   .underline {
     text-decoration-line: underline;
