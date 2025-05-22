@@ -12,29 +12,30 @@ $result = mysqli_query($conn, $query);
     <link href="src/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <header class="bg-transparent fixed top-0 mx-0 items-center">
-        <div class="flex justify-between w-[90%] mx-auto h-15 z-1">
+<body class="w-[100%]">
+    <header class="bg-transparent top-0 mx-0 items-center w-[100%] absolute">
+        <div class="flex justify-between w-[90%] mx-auto h-15 z-2 border">
             <div class=""></div>
-            <nav class="flex items-center">
+            <nav class="flex items-center sticky">
                 <ul class="flex gap-x-20">
-                    <li class="link-list"><a href="">Home</a></li>
-                    <li class="link-list"><a href="">Service</a></li>
+                    <li class="link-list"><a class="" href="">Home</a></li>
+                    <li class="link-list"><a class=""href="">Service</a></li>
                     <li class="link-list"><a href="">About Us</a></li>
                 </ul>
             </nav>
         </div>
-        <img src="https://images.pexels.com/photos/3155726/pexels-photo-3155726.jpeg?cs=srgb&dl=pexels-asadphoto-3155726.jpg&fm=jpg" alt=""
-        class="w-[100%] z-0">
-        <div class="z-1 absolute top-200 left-[20%]">
-            <p></p>
-            <button class="">Make reservation</button>
-        </div>
+        
+        
     </header>
     
     <section>
-        <div>
-
+        <div class="z-0 inset-0 border bg-[linear-gradient: black, transparent, black ]">
+            <img src="https://images.pexels.com/photos/3155726/pexels-photo-3155726.jpeg?cs=srgb&dl=pexels-asadphoto-3155726.jpg&fm=jpg" alt=""
+            class="z-0 shadow-lg">
+            <div class="z-1 absolute top-200 left-[20%]">
+                <p></p>
+                <button class="">Make reservation</button>
+            </div>
         </div>
     </section>
     <main class="">
