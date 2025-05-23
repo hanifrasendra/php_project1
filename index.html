@@ -1,36 +1,29 @@
-<?php
-include 'config.php';
-$query = "SELECT * FROM reservations";
-$result = mysqli_query($conn, $query);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body class="">
-    <header class="border">
-        <div class="inner-header">
-            <div class="logo"></div>
-            <nav class="nav-bar">
-                <ul class="list-group">
-                    <li class="link-list"><a class="" href="">Home</a></li>
-                    <li class="link-list"><a class=""href="">Service</a></li>
-                    <li class="link-list"><a class=""href="">About Us</a></li>
+    <header class="border bg-[rgb()]">
+        <div class="flex w-[90%] border mx-auto h-15">
+            <nav class="flex">
+                <ul class="flex gap-x-10 items-center">
+                    <li class=""><a class="hover:text-blue-300" href="">Home</a></li>
+                    <li class=""><a class=""href="">Service</a></li>
+                    <li class=""><a class=""href="">About Us</a></li>
                 </ul>
             </nav>
         </div>
         
         
     </header>
-    <main class="main">
-        <div class="container1">
-        <table border="1" class="w-150">
-            <tr>
+    <main class="">
+        <div class="border">
+        <table border="1" class="w-150 mt-5 bg-[#fffb]">
+            <tr class="color-black">
                 <th>Nama</th>
                 <th>Date</th>
                 <th>Time</th>

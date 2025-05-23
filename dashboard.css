@@ -1,17 +1,27 @@
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .header {
-    
+    z-index: 1;
+    background-color: transparent;
 }
 
 .inner-header {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
+.nav-bar {
+    display: flex;
+}
+
 .list-group {
     display: flex;
-    gap: 40px;
+    gap: 60px;
 }
 
 .link-list {
@@ -23,12 +33,23 @@
 }
 
 .container1 {
-    width: 500px;
+    width: 900px;
     height: 700px;
     margin: auto;
     justify-items: center;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron {
+    background: linear-gradient();
+    width: 100%;
+    z-index: 0;
+}
+
+.jumbotron>div>img{
+    width: 100%;
+    display: block;
 }
 
 
@@ -47,4 +68,19 @@ form{
 #table  {
     width: 700px;
     margin: 100px auto;
+}
+
+
+/*content layout*/
+
+.main {
+    grid-template-columns: ;
+}
+
+
+/*variable classes*/
+
+
+.border {
+    border: 1px solid black;
 }
