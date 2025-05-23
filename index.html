@@ -69,7 +69,7 @@
                         <th>action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="[&_tr:nth-of-type(even)]:bg-amber-400">
                     <?php while($data = mysqli_fetch_assoc($result)): ?>
                         <tr class="border-b-1 text-center">
                             <td class="px-3 py-[15px]"><?php echo $data['nama'] ?></td>
