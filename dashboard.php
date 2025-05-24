@@ -9,47 +9,64 @@ $result = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body class="">
-    <header class="border">
-        <div class="inner-header">
-            <div class="logo"></div>
-            <nav class="nav-bar">
-                <ul class="list-group">
-                    <li class="link-list"><a class="" href="">Home</a></li>
-                    <li class="link-list"><a class=""href="">Service</a></li>
-                    <li class="link-list"><a class=""href="">About Us</a></li>
+    <header class="border ">
+        <div class="flex w-[90%] border mx-auto h-15">
+            <nav class="flex">
+                <ul class="flex gap-x-10 items-center">
+                    <li class=""><a class="relative after:content-[''] after:absolute after:w-0 
+                        after:h-0.5 after:-bottom-2 after:left-[50%] after:bg-blue-600
+                        after:transition-all after:duration-300 after:ease-in-out after:-translate-x-[50%]
+                        hover:text-blue-300 hover:after:w-[100%]" href="">Home</a></li>
+
+                    <li class=""><a class="relative after:content-[''] after:absolute after:w-0 
+                        after:h-0.5 after:-bottom-2 after:left-[50%] after:bg-blue-600
+                        after:transition-all after:duration-300 after:ease-in-out after:-translate-x-[50%]
+                        hover:text-blue-300 hover:after:w-[100%]"href="">Service</a></li>
+
+                    <li class=""><a class="relative after:content-[''] after:absolute after:w-0 
+                        after:h-0.5 after:-bottom-2 after:left-[50%] after:bg-blue-600
+                        after:transition-all after:duration-300 after:ease-in-out after:-translate-x-[50%]
+                        hover:text-blue-300 hover:after:w-[100%]"href="">About Us</a></li>
                 </ul>
             </nav>
         </div>
         
         
     </header>
-    <main class="main">
-        <div class="container1">
-        <table border="1" class="w-150">
-            <tr>
-                <th>Nama</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Person</th>
-                <th>action</th>
-            </tr>
-            <?php while($data = mysqli_fetch_assoc($result)): ?>
-                <tr class="">
-                    <td class=""><?php echo $data['nama'] ?></td>
-                    <td class=""><?php echo $data['tanggal_reservasi']?></td>
-                    <td class=""><?php echo $data['waktu_reservasi']?></td>
-                    <td class=""><?php echo $data['jumlah_orang']?></td>
-                    <td class="">
-                        <a href="update.php?id=<?php echo $data['id']?>">Edit</a>
-                        <a href="delete.php?id=<?php echo $data['id']?>">Hapus</a>
-                    </td>
-                    <?php endwhile; ?>
-                </tr>
-        </table>
+    <main>
+        <div class="grid grid-cols-6 col-span-2 col-start-1 pt-10">
+        <div class="col-span-4 col-start-1 p-1 rounded-xl">
+            <table border="1" class="w-[100%] bg-[#ebebeb] rounded-2xl [&>tr:nth-of-type(2n)]:bg-white">
+                <thead class="sticky">
+                    <tr class="color-black">
+                        <th class="px-3 py-[15px]">Nama</th>
+                        <th class="px-3 py-[15px]">Date</th>
+                        <th class="px-3 py-[15px]">Time</th>
+                        <th class="px-3 py-[15px]">Person</th>
+                        <th class="px-3 py-[15px]">action</th>
+                    </tr>
+                </thead>
+                <tbody class="[&_tr:nth-of-type(even)]:bg-[#f3f3f3] bg-white">
+                    <?php while($data = mysqli_fetch_assoc($result)): ?>
+                        <tr class="border-b-1 border-[#dddddd] text-center">
+                            <td class="px-3 py-6"><?php echo $data['nama'] ?></td>
+                            <td class="px-3 py-6"><?php echo date('d-M-Y',strtotime($data['tanggal_reservasi']))?></td>
+                            <td class="px-3 py-6"><?php echo date('H:i',strtotime($data['waktu_reservasi']))?></td>
+                            <td class="px-3 py-6"><?php echo $data['jumlah_orang']?></td>
+                            <td class="px-3 py-6">
+                                <a class="text-white bg-green-500 p-1 rounded-lg hover:bg-green-600 hover:font-[600]" href="update.php?id=<?php echo $data['id']?>">Edit</a>
+                                <a class="text-white bg-red-500 p-1 rounded-lg hover:bg-red-600 hover:font-[600]" href="delete.php?id=<?php echo $data['id']?>">Hapus</a>
+                            </td>
+                        <?php endwhile; ?>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
         </div>
     </main>
 </body>
